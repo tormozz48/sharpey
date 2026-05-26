@@ -1,0 +1,18 @@
+{
+  "include": ["apps/api", "apps/worker", "packages/python-shared"],
+  "exclude": [
+    "**/__pycache__",
+    "**/.venv",
+    "**/node_modules",
+    "**/.ruff_cache",
+    "**/.pytest_cache"
+  ],
+  "extraPaths": [
+    "apps/api/src",
+    "apps/worker/src",
+    "packages/python-shared/src"
+  ],
+  "pythonVersion": "3.12",
+  "typeCheckingMode": "strict",
+  "reportMissingTypeStubs": "none"
+}

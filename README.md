@@ -1,2 +1,3 @@
 # sharpey
-Share your data for people beside iron curtain
+
+Self-hosted archive for family videos. Private, invite-only.

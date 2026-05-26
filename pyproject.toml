@@ -1,0 +1,34 @@
+[project]
+name = "sharpey"
+version = "0.0.0"
+description = "Self-hosted archive for family videos."
+requires-python = ">=3.12"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pyright>=1.1.380",
+    "ruff>=0.6",
+]
+
+[tool.uv.workspace]
+members = ["apps/api", "apps/worker", "packages/python-shared"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "PL", "RUF"]
+ignore = [
+    "PLR0913", # too-many-arguments (common in FastAPI handlers)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["apps", "packages"]
+addopts = ["--import-mode=importlib"]

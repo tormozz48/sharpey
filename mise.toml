@@ -1,0 +1,10 @@
+[tools]
+python = "3.12"
+node = "22"
+pnpm = "10"
+uv = "latest"
+opentofu = "latest"
+just = "latest"
+
+[env]
+PYTHONDONTWRITEBYTECODE = "1"
